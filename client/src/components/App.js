@@ -221,6 +221,8 @@ const router = createBrowserRouter(
 )
 return (
   <div className='App'>
+    {/* <img src="gallery_photos/Beef_Tacos.jpg"/> */}
+    
     <RouterProvider router={router}/>
   </div>
 )

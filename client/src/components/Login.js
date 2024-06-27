@@ -67,8 +67,9 @@ const Login = ({ handleLogin, fetchResult, loginFormData, setLoginFormData}) => 
           <a href="">forgot password?</a>
         </div>
         <button type="submit" className="btn">
-          login
+          Login
         </button>
+        <button onClick={adminClick} className="btn">Admin</button>
         <div className="link">
           <p>
             Don't have an account?
@@ -80,7 +81,7 @@ const Login = ({ handleLogin, fetchResult, loginFormData, setLoginFormData}) => 
         </div>
       </form>
       <div>
-        <button onClick={adminClick} className="btn">Admin</button>
+      
       </div>
     </div>
   );

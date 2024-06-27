@@ -79,7 +79,7 @@ const handleOnClick = (e) => {
         </div>
 
         <button type="submit" className="btn">
-          sign up
+          Sign up
         </button>
         <div className="link">
           <p>
