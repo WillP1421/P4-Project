@@ -15,11 +15,10 @@ with app.app_context():
 
     fake = Faker()
     
-    customers = []
     
+    
+    customers = []
     for n in range(100):
-        
-
         customer = Customer(
             username=fake.name(),
             email=fake.email(),
@@ -33,58 +32,14 @@ with app.app_context():
     
     db.session.add_all(customers)
 
+
+
+
     
-    
-    
-    # Restaurant.query.delete()
-
-    # restaurants = []
-
-    # restaurants.append(Restaurant( name="Hunger Games"))
-    # restaurants.append(Restaurant( name="Chops"))
-    # restaurants.append(Restaurant( name="The Last"))
-    # restaurants.append(Restaurant( name="Cafe"))
-    # restaurants.append(Restaurant( name="JWJ Bistro"))
-
-    # db.session.add_all(restaurants)
-    
-    
-    # Food.query.delete()
-
-    # foods = []
-
-    # foods.append(Food( name="Curry Chicken", price= 10.99, type="Jamaican"))
-    # foods.append(Food( name="Jerk Chicken", price= 9.99, type="Jamaican"))
-    # foods.append(Food( name="Oxtails", price= 13.99, type="Jamaican"))
-    # foods.append(Food( name="Brown Stew Chicken", price= 10.99, type="Jamaican"))
-    # foods.append(Food( name="Jerk Pork", price= 9.99, type="Jamaican"))
-    # foods.append(Food( name="Kimchi Stew", price= 11.99, type="Korean"))
-    # foods.append(Food( name="Soy Bean Paste Stew", price= 11.99, type="Korean"))
-    # foods.append(Food( name="Spicy Pork Stir Fry", price= 13.99, type="Korean"))
-    # foods.append(Food( name="Pork Belly", price= 13.99, type="Korean"))
-    # foods.append(Food( name="Blood Sausage", price= 8.99, type="Korean"))
-    # foods.append(Food( name="Chicken Parmesan", price= 15.99, type="Italian"))
-    # foods.append(Food( name="Chicken Alfredo", price= 15.99, type="Italian"))
-    # foods.append(Food( name="Gnochi", price= 12.99 , type="Italian"))
-    # foods.append(Food( name="Risotto", price= 15.99, type="Italian"))
-    # foods.append(Food( name="Ravioli", price= 14.99, type="Italian"))
-    # foods.append(Food( name="BBQ Ribs", price=  16.99 , type="Soulfood"))
-    # foods.append(Food( name="Fried Chicken", price= 13.99 , type="Soulfood"))
-    # foods.append(Food( name="Pork Chops", price= 13.99, type="Soulfood"))
-    # foods.append(Food( name="Fried Catfish", price= 13.99, type="Soulfood"))
-    # foods.append(Food( name="Smoked Turkey Wings", price= 11.99, type="Soulfood"))
-    # foods.append(Food( name="Pupusa", price= 10.99, type="Mexican"))
-    # foods.append(Food( name="Quesadilla", price= 10.99, type="Mexican"))
-    # foods.append(Food( name="Tacos", price= 10.99, type="Mexican"))
-    # foods.append(Food( name="Enchiladas", price= 10.99, type="Mexican"))
-    # foods.append(Food( name="Chimichanga", price= 10.99, type="Mexican"))
-
-
-    # db.session.add_all(foods)
 
     Food.query.delete()
     Restaurant.query.delete()
-    # RestaurantFood.query.delete()
+    
 
     jamaican = Restaurant(name= "Island Spice")
     korean = Restaurant(name= "Korean House")
@@ -127,35 +82,9 @@ with app.app_context():
             chimichanga]
 
 
-    # pr1 = RestaurantFood(restaurants=jamaican, food=curryChicken, price= 10.99, rating= 5)
-    # pr2 = RestaurantFood(restaurants=jamaican, food=jerkChicken, price= 10.99, rating= 5 )
-    # pr3 = RestaurantFood(restaurants=jamaican, food=oxtails, price= 10.99, rating= 5)
-    # pr4 = RestaurantFood(restaurants=jamaican, food=brownStewChicken, price= 10.99, rating= 5 )
-    # pr5 = RestaurantFood(restaurants=jamaican, food=jerkPork, price= 10.99, rating= 5)
-    # pr6 = RestaurantFood(restaurants=korean, food=kimchiStew, price= 10.99, rating= 5 )
-    # pr7 = RestaurantFood(restaurants=korean, food=soyBeanPasteStew, price= 10.99, rating= 5)
-    # pr8 = RestaurantFood(restaurants=korean, food=spicyPorkStirFry, price= 10.99, rating= 5)
-    # pr9 = RestaurantFood(restaurants=korean, food=porkBelly, price= 10.99, rating= 5)
-    # pr10 = RestaurantFood(restaurants=korean, food=bloodSausage, price= 10.99, rating= 5)
-    # pr11 = RestaurantFood(restaurants=italian, food=chickenParmesan, price= 10.99, rating= 5)
-    # pr12 = RestaurantFood(restaurants=italian, food=chickenAlfredo, price= 10.99, rating= 5)
-    # pr13 = RestaurantFood(restaurants=italian, food=gnocchi, price= 10.99, rating= 5)
-    # pr14 = RestaurantFood(restaurants=italian, food=risotto, price= 10.99, rating= 5)
-    # pr15 = RestaurantFood(restaurants=italian, food=ravioli, price= 10.99,  rating= 5)
-    # pr16 = RestaurantFood(restaurants=soulfood, food=bbqRibs, price= 10.99, rating= 5)
-    # pr17 = RestaurantFood(restaurants=soulfood, food=friedChicken, price= 10.99, rating= 5)
-    # pr18 = RestaurantFood(restaurants=soulfood, food=porkChops, price= 10.99, rating= 5)
-    # pr19 = RestaurantFood(restaurants=soulfood, food=friedCatfish, price= 10.99,    rating= 5)
-    # pr20 = RestaurantFood(restaurants=soulfood, food=smokedTurkeyWings, price= 10.99, rating= 5)
-    # pr21 = RestaurantFood(restaurants=mexican, food=pupusa, price= 10.99, rating= 5)
-    # pr22 = RestaurantFood(restaurants=mexican, food=quesadilla, price= 10.99, rating= 5)
-    # pr23 = RestaurantFood(restaurants=mexican, food=tacos, price= 10.99, rating= 5)
-    # pr24 = RestaurantFood(restaurants=mexican, food=enchiladas, price= 10.99,    rating= 5)
-    # pr25 = RestaurantFood(restaurants=mexican, food=chimichanga, price= 10.99, rating= 5)
-
-    # restaurantFood = [pr1, pr2, pr3, pr4, pr5, pr6, pr7, pr8, pr9, pr10, pr11, pr12, pr13, pr14, pr15, pr16, pr17, pr18, pr19, pr20, pr21, pr22, pr23, pr24, pr25]
+    
 
     db.session.add_all(restaurants)
     db.session.add_all(foods)
-    # db.session.add_all(restaurantFood)
+    
     db.session.commit()
